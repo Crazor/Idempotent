@@ -10,6 +10,9 @@
 		6E286D651DB2E6B400E65AB3 /* Idempotent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E286D5B1DB2E6B400E65AB3 /* Idempotent.framework */; };
 		6E286D6A1DB2E6B400E65AB3 /* IdempotentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E286D691DB2E6B400E65AB3 /* IdempotentTests.swift */; };
 		6E286D6C1DB2E6B400E65AB3 /* Idempotent.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E286D5E1DB2E6B400E65AB3 /* Idempotent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E286D771DB2E6CB00E65AB3 /* idempotent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E286D751DB2E6CB00E65AB3 /* idempotent.cpp */; };
+		6E286D781DB2E6CB00E65AB3 /* idempotent.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6E286D761DB2E6CB00E65AB3 /* idempotent.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E286D7B1DB2EAB600E65AB3 /* IdempotentSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E286D791DB2EA1A00E65AB3 /* IdempotentSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		6E286D641DB2E6B400E65AB3 /* IdempotentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdempotentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E286D691DB2E6B400E65AB3 /* IdempotentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdempotentTests.swift; sourceTree = "<group>"; };
 		6E286D6B1DB2E6B400E65AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E286D751DB2E6CB00E65AB3 /* idempotent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = idempotent.cpp; sourceTree = "<group>"; };
+		6E286D761DB2E6CB00E65AB3 /* idempotent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = idempotent.hpp; sourceTree = "<group>"; };
+		6E286D791DB2EA1A00E65AB3 /* IdempotentSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdempotentSwift.swift; path = IdempotentTests/IdempotentSwift.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +77,11 @@
 		6E286D5D1DB2E6B400E65AB3 /* Idempotent */ = {
 			isa = PBXGroup;
 			children = (
+				6E286D791DB2EA1A00E65AB3 /* IdempotentSwift.swift */,
 				6E286D5E1DB2E6B400E65AB3 /* Idempotent.h */,
 				6E286D5F1DB2E6B400E65AB3 /* Info.plist */,
+				6E286D751DB2E6CB00E65AB3 /* idempotent.cpp */,
+				6E286D761DB2E6CB00E65AB3 /* idempotent.hpp */,
 			);
 			path = Idempotent;
 			sourceTree = "<group>";
@@ -94,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E286D6C1DB2E6B400E65AB3 /* Idempotent.h in Headers */,
+				6E286D781DB2E6CB00E65AB3 /* idempotent.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E286D7B1DB2EAB600E65AB3 /* IdempotentSwift.swift in Sources */,
+				6E286D771DB2E6CB00E65AB3 /* idempotent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +369,7 @@
 		6E286D731DB2E6B400E65AB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = IdempotentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -369,6 +382,7 @@
 		6E286D741DB2E6B400E65AB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = IdempotentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -397,6 +411,7 @@
 				6E286D711DB2E6B400E65AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E286D721DB2E6B400E65AB3 /* Build configuration list for PBXNativeTarget "IdempotentTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +420,7 @@
 				6E286D741DB2E6B400E65AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
